@@ -25,4 +25,5 @@ RUN mkdir -p ${ANDROID_HOME}/licenses && \
 RUN echo y | sdkmanager --channel=3 --no_https tools platform-tools \
     "platforms;android-O" \
     "build-tools;26.0.0-rc2" \
-    "extras;google;m2repository"
+    "extras;google;m2repository" && \
+  sdkmanager --uninstall emulator
