@@ -1,7 +1,6 @@
 FROM frolvlad/alpine-glibc:alpine-3.6
 
-RUN apk update && apk upgrade && \
-  apk add \
+RUN apk add --no-cache \
   openjdk8 \
   bash \
   unzip
@@ -26,5 +25,4 @@ RUN mkdir -p ${ANDROID_HOME}/licenses && \
 RUN echo y | sdkmanager --channel=3 --no_https tools platform-tools \
     "platforms;android-O" \
     "build-tools;26.0.0-rc2" \
-    "extras;google;m2repository" && \
-  rm /var/cache/apk/*
+    "extras;google;m2repository"
