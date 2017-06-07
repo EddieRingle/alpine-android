@@ -27,3 +27,4 @@ RUN echo y | sdkmanager --channel=3 --no_https tools platform-tools \
     "build-tools;26.0.0-rc2" \
     "extras;google;m2repository" && \
   sdkmanager --uninstall emulator
+RUN mkdir -p ~/.gradle && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties
