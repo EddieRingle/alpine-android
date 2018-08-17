@@ -9,7 +9,7 @@ ENV JAVA8_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV JAVA_HOME $JAVA8_HOME
 ENV PATH $PATH:$JAVA_HOME/bin
 
-ENV ANDROID_SDK_FILE sdk-tools-linux-3859397.zip
+ENV ANDROID_SDK_FILE sdk-tools-linux-4333796.zip
 ENV ANDROID_SDK_URL http://dl.google.com/android/repository/${ANDROID_SDK_FILE}
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
