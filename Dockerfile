@@ -24,7 +24,6 @@ RUN mkdir -p ${ANDROID_HOME}/licenses && \
   echo -e "99c0028c33805669c5aafd6a51857a5e95b90d6e\n84831b9409646a918e30573bab4c9c91346d8abd" > ${ANDROID_HOME}/licenses/android-sdk-preview-license
 RUN echo y | sdkmanager --channel=3 --no_https tools platform-tools \
     "platforms;android-28" \
-    "build-tools;28.0.2" \
-    "extras;google;m2repository" && \
+    "build-tools;28.0.2" && \
   sdkmanager --uninstall emulator
 RUN mkdir -p ~/.gradle && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties
