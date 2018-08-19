@@ -19,10 +19,7 @@ RUN mkdir -p ${ANDROID_HOME} && cd ${ANDROID_HOME} && \
   wget -q ${ANDROID_SDK_URL} && \
   unzip ${ANDROID_SDK_FILE} && \
   rm ${ANDROID_SDK_FILE} && \
-  mkdir -p ${ANDROID_HOME}/licenses && \
-  echo -e "8933bad161af4178b1185d1a37fbf41ea5269c55\nd56f5187479451eabf01fb78af6dfcb131a6481e" > ${ANDROID_HOME}/licenses/android-sdk-license && \
-  echo -e "99c0028c33805669c5aafd6a51857a5e95b90d6e\n84831b9409646a918e30573bab4c9c91346d8abd" > ${ANDROID_HOME}/licenses/android-sdk-preview-license && \
-  echo y | sdkmanager --channel=3 tools platform-tools \
+  yes | sdkmanager --channel=3 tools platform-tools \
     "platforms;android-28" \
     "build-tools;28.0.2" && \
   mkdir -p ~/.gradle && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties
