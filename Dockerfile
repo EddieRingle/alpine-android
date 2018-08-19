@@ -22,4 +22,5 @@ RUN mkdir -p ${ANDROID_HOME} && cd ${ANDROID_HOME} && \
   yes | sdkmanager --channel=3 tools platform-tools \
     "platforms;android-28" \
     "build-tools;28.0.2" && \
+  bash -c "rm -rf ${ANDROID_HOME}/tools/lib/{,monitor-}x86" && \
   mkdir -p ~/.gradle && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties
