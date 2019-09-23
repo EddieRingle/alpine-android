@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc:alpine-3.8
+FROM frolvlad/alpine-glibc:alpine-3.10
 
 RUN apk add --no-cache \
   openjdk8 \
